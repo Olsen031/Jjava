@@ -7,26 +7,35 @@
  */
 public class Song
 {
-    // instance variables - replace the example below with your own
+   
     private int rating;
     private String title;
-
-    /**
-     * Constructor for objects of class Song
-     */
+    private double price;
+    private boolean favorite;
+   
     public Song()
     {
-        // initialise instance variables
-        rating = 0;
-        title = ""; 
-   
+         rating = 0;
+         title = ""; 
+         price = 0.0;
     }
    
+    public double getPrice(){
+        return price;
+    }
+    
+    public void setPrice(double p){
+         price = p;
+    }
+    
     public String getTitle(){
       return title;   
     }
     public void setTitle(String t){
         title = t;
+    }
+    public void addToFavorites(){
+        favorite = true;
     }
     
     public static void main(){
@@ -39,12 +48,6 @@ public class Song
         Book book1 = new Book();
         System.out.println(book1);
        
-    }
-    
-    
-    
-   
-
-    
+    } 
     
 }
