@@ -12,42 +12,57 @@ public class Song
     private String title;
     private double price;
     private boolean favorite;
-   
-    public Song()
-    {
-         rating = 0;
-         title = ""; 
-         price = 0.0;
-    }
-   
-    public double getPrice(){
-        return price;
+    private static int numSongs = 0;
+ 
+
+    public Song(){
+     title = "";
+     price = 0.0;
+     rating = 0;
     }
     
+     public Song(String title, double price){
+         this.title = title;
+         this.price = price;
+        }
+   
+    public Song(String title, double price, int rating) {
+    this.title = title;
+    this.price = price;
+    this.rating = rating;
+    numSongs = numSongs + 1;
+   
+    
+}
+
+    public double price(){
+    return price;}
     public void setPrice(double p){
-         price = p;
+    price = p;}
+        
+    public int getRating(){
+        return rating;
     }
-    
-    public String getTitle(){
-      return title;   
+    public void setRating(int r){
+        rating = r;
     }
-    public void setTitle(String t){
-        title = t;
+      public String getTitle() {
+          return title;
+        }
+
+      public void setTitle(String t) {
+          title = t;
+        }
+  
+  public int getNumSongsInLibrary(){
+     return numSongs; 
     }
+   
+   
     public void addToFavorites(){
         favorite = true;
     }
     
-    public static void main(){
-        Song song1 = new Song();
-        System.out.println(song1);
-        song1.setTitle("Johnny B. Goode");
-        System.out.println(song1.getTitle());
-        Movie movie1 = new Movie();
-        System.out.println(movie1);
-        Book book1 = new Book();
-        System.out.println(book1);
-       
-    } 
+   
     
 }

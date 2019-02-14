@@ -10,6 +10,8 @@ public class Book
    
     private int rating;
     private String title;
+    private int pages;
+    
 
     public Book()
     {
@@ -18,6 +20,11 @@ public class Book
         title = ""; 
    
     }
+    public Book(String title, int pages){
+        this.title = title;
+        this.pages = pages;
+    }
+    
    
     public String getTitle(){
       return title;   
@@ -25,5 +32,9 @@ public class Book
     public void setTitle(String t){
         title = "t";
     }
+    public int getPages(){
+    return pages;}
+    public void setPages(int p){
+    pages = p;}
         
 }
