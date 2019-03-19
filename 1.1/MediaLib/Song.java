@@ -25,6 +25,10 @@ public class Song
          this.title = title;
          this.price = price;
         }
+        
+        public Song(String title){
+            this.title = title;
+        }
    
     public Song(String title, double price, int rating) {
     this.title = title;
