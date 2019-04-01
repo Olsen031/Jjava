@@ -8,6 +8,8 @@ public class Algorithms {
                 new Song(4, "Thunderstruck"),
                 new Song(10, "Cold Gin")
         };
-        System.out.println(tenSongs[0]);
+        for(int i = 0; i < tenSongs.length; i++){
+            System.out.println(tenSongs[i]);
+        }
     }
 }
