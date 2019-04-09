@@ -8,16 +8,29 @@ public class setArrayCheckerboard {
             for (int j = 0; j < checkerBoard[0].length; j++) {
                 int oddColumn = j % 2;
                 if(oddRow == 0 && oddColumn == 0){
-                    checkerBoard[i][j] = "W";
+                    checkerBoard[i][j] = "WS";
                 }
                 else if(oddRow == 0 && oddColumn == 1){
-                    checkerBoard[i][j] = "B";
+                    checkerBoard[i][j] = "BS";
+
+                    if(i == 0 && oddColumn == 1){
+                        checkerBoard[i][j] = "BC";
+                    }
+                    if(i == 6 && oddColumn == 1){
+                        checkerBoard[i][j] = "RC";
+                    }
                 }
                 else if(oddRow == 1 && oddColumn == 0){
-                    checkerBoard[i][j] = "B";
+                    checkerBoard[i][j] = "BS";
+                    if((i == 1 && oddColumn == 0)){
+                        checkerBoard[i][j] = "BC";
+                    }
+                    if((i == 7 && oddColumn == 0)){
+                        checkerBoard[i][j] = "RC";
+                    }
                 }
                 else
-                    checkerBoard[i][j] = "W";
+                    checkerBoard[i][j] = "WS";
                 System.out.print(checkerBoard[i][j] + " ");
             }
 
