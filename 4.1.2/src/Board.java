@@ -24,7 +24,10 @@ public abstract class Board
     public Tile[][] makeBoard() {
         return new Tile[rows][columns];
      }
-    
+
+
+
+
     /**
      * Return the array of cards
      * 

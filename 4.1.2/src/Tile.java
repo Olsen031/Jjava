@@ -90,5 +90,29 @@ public class Tile
         return matched;
     }
 
+    public boolean addsTo7(Tile tile){
+        int a = Integer.parseInt(this.cardFace);
+        int b = Integer.parseInt(tile.cardFace);
+
+
+
+        if(a + b == 7){
+            return true;
+        }
+        else
+            return false;
+
+
+    }
+
+    public boolean equals(Tile tile){
+        if(this.cardFace.equals(tile.cardFace)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 }
 
